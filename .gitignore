@@ -367,3 +367,4 @@ FodyWeavers.xsd
 Secrets.cs
 *.secrets.cs
 appsettings.Development.json
+/AllegroBidder/Secrets.cs
