@@ -1,0 +1,42 @@
+﻿<Window x:Class="AllegroBidder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Allegro Bidder" Height="400" Width="560">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Wiersz wprowadzania ID -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,12">
+            <TextBlock Text="ID oferty:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+            <TextBox x:Name="TxtOfferId" Width="200" Margin="0,0,8,0"/>
+            <Button x:Name="BtnLoad" Content="Pobierz informacje" Click="BtnLoad_Click"/>
+        </StackPanel>
+
+        <!-- Informacje o ofercie -->
+        <StackPanel Grid.Row="1" Margin="0,0,0,12">
+            <TextBlock x:Name="TxtOfferName" FontWeight="Bold" TextWrapping="Wrap"/>
+            <TextBlock x:Name="TxtPrice" Margin="0,4,0,0"/>
+            <TextBlock x:Name="TxtEnding" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <!-- Wprowadzanie ceny -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,12">
+            <TextBlock Text="Twoja oferta (PLN):" VerticalAlignment="Center" Margin="0,0,8,0"/>
+            <TextBox x:Name="TxtBidAmount" Width="120" Margin="0,0,8,0"/>
+            <Button x:Name="BtnBid" Content="Złóż ofertę" Click="BtnBid_Click" IsEnabled="False"/>
+        </StackPanel>
+
+        <!-- Logi -->
+        <TextBlock Grid.Row="3" x:Name="TxtLog" TextWrapping="Wrap" 
+                   VerticalAlignment="Top" Foreground="Gray"/>
+
+        <TextBlock Grid.Row="4" x:Name="TxtStatus" Foreground="DarkBlue" 
+                   Margin="0,8,0,0" TextWrapping="Wrap"/>
+    </Grid>
+</Window>
