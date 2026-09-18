@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+
+# === Pliki z sekretami (KRYTYCZNE!) ===
+Secrets.cs
+*.secrets.cs
+appsettings.Development.json

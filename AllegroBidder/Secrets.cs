@@ -3,7 +3,7 @@
 public static class Secrets
 {
     // Uzyskaj z developer.allegro.pl
-    public const string ClientId = "TWOJE_CLIENT_ID";
+    public const string ClientId = "TWOJE_CLIENT_id";
     public const string ClientSecret = "TWOJE_CLIENT_SECRET";
 
     // Token dostępu OAuth2 (uzyskany z procesu Device Flow)
